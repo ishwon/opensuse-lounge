@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c12812b9eb87123e52001cdbb0bc808",
+    "content-hash": "617e881b9aba32f926b29060d9ef840b",
     "packages": [
         {
             "name": "brick/math",
@@ -507,6 +507,69 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "eznix86/laravel-version",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eznix86/laravel-version.git",
+                "reference": "76e4169dd19106095abb5a0eaabef6cd0f4f3730"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eznix86/laravel-version/zipball/76e4169dd19106095abb5a0eaabef6cd0f4f3730",
+                "reference": "76e4169dd19106095abb5a0eaabef6cd0f4f3730",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^11.0|^12.0",
+                "phlak/semver": "^6.1"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.8",
+                "laravel/pint": "^1.26",
+                "orchestra/testbench": "^7.0|^8.0|^9.0|^10.0",
+                "pestphp/pest": "^4.1",
+                "pestphp/pest-plugin-type-coverage": "^4.0",
+                "phpstan/phpstan": "^2.1",
+                "rector/rector": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Version": "Eznix86\\Version\\Facades\\Version"
+                    },
+                    "providers": [
+                        "Eznix86\\Version\\VersionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Eznix86\\Version\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Bernard",
+                    "email": "contact.brunobernard@gmail.com"
+                }
+            ],
+            "description": "Semantic app versioning for Laravel with git integration.",
+            "support": {
+                "issues": "https://github.com/eznix86/laravel-version/issues",
+                "source": "https://github.com/eznix86/laravel-version/tree/v1.1.0"
+            },
+            "time": "2025-12-11T13:23:26+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -2703,6 +2766,64 @@
                 }
             ],
             "time": "2025-11-20T02:34:59+00:00"
+        },
+        {
+            "name": "phlak/semver",
+            "version": "6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHLAK/SemVer.git",
+                "reference": "5efaa9523cdf65ed740a1cb0a7c551a779ae21c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHLAK/SemVer/zipball/5efaa9523cdf65ed740a1cb0a7c551a779ae21c6",
+                "reference": "5efaa9523cdf65ed740a1cb0a7c551a779ae21c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1 || ^8.2 || ^8.3 || ^8.4"
+            },
+            "require-dev": {
+                "phlak/coding-standards": "^4.0",
+                "phpstan/phpstan": "^2.0",
+                "yoast/phpunit-polyfills": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Support/helpers.php"
+                ],
+                "psr-4": {
+                    "PHLAK\\SemVer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Kankiewicz",
+                    "email": "Chris@ChrisKankiewicz.com"
+                }
+            ],
+            "description": "Semantic versioning helper library",
+            "support": {
+                "issues": "https://github.com/PHLAK/SemVer/issues",
+                "source": "https://github.com/PHLAK/SemVer/tree/6.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/PHLAK",
+                    "type": "github"
+                },
+                {
+                    "url": "https://paypal.me/ChrisKankiewicz",
+                    "type": "paypal"
+                }
+            ],
+            "time": "2025-06-14T16:31:14+00:00"
         },
         {
             "name": "phpoption/phpoption",
