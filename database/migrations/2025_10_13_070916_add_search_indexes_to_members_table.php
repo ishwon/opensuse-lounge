@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('members', function (Blueprint $table) {
-            $table->fullText(['username', 'email_target', 'email_nick', 'libera_nick'], 'members_search_fulltext');
-        });
+        $connection = Schema::getConnection();
+        $driver = $connection->getDriverName();
+
+        if (in_array($driver, ['mysql', 'mariadb', 'pgsql'])) {
+            Schema::table('members', function (Blueprint $table) {
+                $table->fullText(['username', 'email_target', 'email_nick', 'libera_nick'], 'members_search_fulltext');
+            });
+        }
     }
 
     /**
@@ -23,8 +28,13 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('members', function (Blueprint $table) {
-            $table->dropFullText('members_search_fulltext');
-        });
+        $connection = Schema::getConnection();
+        $driver = $connection->getDriverName();
+
+        if (in_array($driver, ['mysql', 'mariadb', 'pgsql'])) {
+            Schema::table('members', function (Blueprint $table) {
+                $table->dropFullText('members_search_fulltext');
+            });
+        }
     }
 };
