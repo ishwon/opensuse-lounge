@@ -26,3 +26,7 @@ _ide*
 .phpstorm.meta.php
 debugbar
 rector
+
+**/caddy
+frankenphp
+frankenphp-worker.php
